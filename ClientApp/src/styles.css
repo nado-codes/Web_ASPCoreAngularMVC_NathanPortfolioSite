@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+
+body {
+  background-color: #1E2245;
+}
+p {
+    color: white;
+}
+h1 {
+    color: white;
+}
+li {
+    color: white;
+}
+td {
+    color: white;
+}
+th {
+    color: white;
+}
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.container {
+    height: 100%;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nps-img {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 100px;
+}
+
+.nps-img > img {
+  object-fit: cover;
+  padding-right: 50px;
+  transform: scale(150%);
+}
