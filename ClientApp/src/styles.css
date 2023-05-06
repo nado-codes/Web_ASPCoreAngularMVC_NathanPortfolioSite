@@ -43,6 +43,14 @@ code {
   height: 150px;
   overflow: hidden;
   border-radius: 100px;
+  animation: ripple 1.5s forwards;
+  transform-origin: center;
+}
+
+.nps-img-pulse {
+  animation-delay: 1.5s;
+  animation: pulse 1.5s ease-in-out infinite;
+  transform-origin: center;
 }
 
 .nps-img > img {
@@ -50,3 +58,28 @@ code {
   padding-right: 50px;
   transform: scale(150%);
 }
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
