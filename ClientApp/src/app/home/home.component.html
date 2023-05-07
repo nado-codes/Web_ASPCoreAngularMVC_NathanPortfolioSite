@@ -1,7 +1,20 @@
-<div style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100vh;">
-<h1>Hey there - I'm Nathan.</h1>
-<div id="profile-pic" class="nps-img pulse" style="padding-right: 100px;">
-  <img style="width: 200px;" src="../../assets/nathan.jpg" />
-</div>
-</div>
+<div
+  style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  "
+>
+  <app-typewriter
+    ><p style="background: green; margin-bottom: 0px">
+      This is my text
+    </p></app-typewriter
+  >
 
+  <h1 #hey style="text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5)">Hey there!</h1>
+
+  <h1 #nathan style="text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5)"></h1>
+  <app-profile-picture-animated></app-profile-picture-animated>
+</div>

@@ -3,22 +3,22 @@
 /* Provide sufficient contrast against white background */
 
 body {
-  background-color: #1E2245;
+  background-color: #1e2245;
 }
 p {
-    color: white;
+  color: white;
 }
 h1 {
-    color: white;
+  color: white;
 }
 li {
-    color: white;
+  color: white;
 }
 td {
-    color: white;
+  color: white;
 }
 th {
-    color: white;
+  color: white;
 }
 a {
   color: #0366d6;
@@ -29,7 +29,7 @@ code {
 }
 
 .container {
-    height: 100%;
+  height: 100%;
 }
 
 .btn-primary {
@@ -37,49 +37,3 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
-
-.nps-img {
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-  border-radius: 100px;
-  animation: ripple 1.5s forwards;
-  transform-origin: center;
-}
-
-.nps-img-pulse {
-  animation-delay: 1.5s;
-  animation: pulse 1.5s ease-in-out infinite;
-  transform-origin: center;
-}
-
-.nps-img > img {
-  object-fit: cover;
-  padding-right: 50px;
-  transform: scale(150%);
-}
-
-@keyframes ripple {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  10% {
-    transform: scale(2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-

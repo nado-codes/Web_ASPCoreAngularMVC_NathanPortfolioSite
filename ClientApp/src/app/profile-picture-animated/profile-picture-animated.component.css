@@ -1,0 +1,40 @@
+.nps-img {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 100px;
+  animation: grow 1.5s forwards;
+  transform-origin: center;
+}
+
+.nps-img > img {
+  object-fit: cover;
+  padding-right: 50px;
+  transform: scale(150%);
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.025);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.nps-ripple-circle {
+}

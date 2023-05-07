@@ -1,0 +1,32 @@
+/* Set up the text container */
+.typewriter {
+  overflow-x: hidden; /* Hide the text that goes outside the container */
+  border-right: 0.01em solid cyan; /* Create the blinking cursor effect */
+  white-space: nowrap; /* Prevent line breaks */
+  letter-spacing: 0.1em; /* Add some spacing between letters */
+  animation: typing 1s steps(30, end);
+  display: flex;
+  background: red;
+}
+
+/* Set up the animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0% {
+    border-right: 0.01em solid cyan;
+  }
+  50% {
+    border-right: 0.01em solid rgba(0, 1, 1, 0);
+  }
+  100% {
+    border-right: 0.01em solid cyan;
+  }
+}
