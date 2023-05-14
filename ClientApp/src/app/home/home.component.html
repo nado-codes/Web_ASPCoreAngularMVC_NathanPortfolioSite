@@ -7,14 +7,30 @@
     height: 100vh;
   "
 >
-  <app-typewriter
+  <!--app-typewriter
     ><p style="background: green; margin-bottom: 0px">
       This is my text
     </p></app-typewriter
-  >
-
-  <h1 #hey style="text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5)">Hey there!</h1>
+  -->
+  <div #widescreen_top class="widescreen top" style="display: none"></div>
+  <div #sc1_container>
+    <button #sc1_btn_start class="nps-button nps-interact">Start Intro</button>
+  </div>
+  <div #sc2_container style="display: none">
+    <audio #sc2_audio>
+      <source src="../../assets/warmChime.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <div #sc2a>
+      <app-profile-picture-animated
+        #sc2a_profilepic
+      ></app-profile-picture-animated>
+      <app-typewriter class="hey">
+        <h1 style="text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5)">Hey there!</h1>
+      </app-typewriter>
+    </div>
+  </div>
+  <div #widescreen_bottom class="widescreen bottom" style="display: none"></div>
 
   <h1 #nathan style="text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5)"></h1>
-  <app-profile-picture-animated></app-profile-picture-animated>
 </div>

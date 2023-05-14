@@ -3,7 +3,7 @@
 /* Provide sufficient contrast against white background */
 
 body {
-  background-color: #1e2245;
+  background-color: #111327;
 }
 p {
   color: white;
@@ -36,4 +36,24 @@ code {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
+}
+
+.nps-button {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  background-color: #0084ff;
+  border-color: #00ccff;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #fff;
+  height: 30px;
+}
+
+.nps-interact:hover {
+  filter: brightness(80%);
+}
+
+.nps-interact:active {
+  filter: none;
 }

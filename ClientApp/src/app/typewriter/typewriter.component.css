@@ -4,9 +4,8 @@
   border-right: 0.01em solid cyan; /* Create the blinking cursor effect */
   white-space: nowrap; /* Prevent line breaks */
   letter-spacing: 0.1em; /* Add some spacing between letters */
-  animation: typing 1s steps(30, end);
+  /* animation: typing 1s steps(30, end); */
   display: flex;
-  background: red;
 }
 
 /* Set up the animation */
