@@ -11,6 +11,8 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ProfilePictureAnimatedComponent } from './profile-picture-animated/profile-picture-animated.component';
 import { TypewriterComponent } from './typewriter/typewriter.component';
+import { IntroComponent } from './intro/intro.component';
+import { BubbleComponent } from './bubble/bubble.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { TypewriterComponent } from './typewriter/typewriter.component';
     CounterComponent,
     FetchDataComponent,
     ProfilePictureAnimatedComponent,
-    TypewriterComponent
+    TypewriterComponent,
+    IntroComponent,
+    BubbleComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

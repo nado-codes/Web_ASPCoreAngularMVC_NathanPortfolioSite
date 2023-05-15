@@ -1,3 +1,63 @@
+<head>
+  <style>
+    .bubble {
+      position: absolute;
+      border: 1px solid cyan;
+      border-radius: 100px;
+      width: 100px;
+      height: 100px;
+      background: rgba(0, 255, 255, 0.125);
+      box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5);
+    }
+
+    .bubble:hover {
+      animation: circleTop 2s forwards, bubblePulse 2s forwards infinite;
+    }
+
+    .top {
+      animation: circleTop 2s forwards;
+    }
+
+    .bottom {
+      animation: circleBottom 2s forwards;
+    }
+
+    .left {
+      animation: circleLeft 2s forwards;
+    }
+
+    .right {
+      animation: circleRight 2s forwards;
+    }
+
+    @keyframes bubblePulse {
+      from {
+        box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5);
+      }
+      35% {
+        box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.25);
+      }
+      to {
+        box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5);
+      }
+    }
+
+    @keyframes circleTop {
+      from {
+        top: calc(25%);
+        transform: translate(0%, 0%);
+      }
+      to {
+        top: calc(-50%);
+        transform: translate(-50%, -50%) translateX(150px);
+      }
+    }
+  </style>
+</head>
+<audio #audio>
+  <source src="../../assets/warmChime.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
 <div
   style="
     display: flex;
@@ -7,30 +67,18 @@
     height: 100vh;
   "
 >
-  <!--app-typewriter
-    ><p style="background: green; margin-bottom: 0px">
-      This is my text
-    </p></app-typewriter
-  -->
-  <div #widescreen_top class="widescreen top" style="display: none"></div>
-  <div #sc1_container>
-    <button #sc1_btn_start class="nps-button nps-interact">Start Intro</button>
+  <div
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 200px;
+      height: 200px;
+    "
+  >
+    <app-profile-picture-animated></app-profile-picture-animated>
+    <app-bubble [anchor]="'top'"></app-bubble>
+    <app-bubble [anchor]="'bottom'"></app-bubble>
   </div>
-  <div #sc2_container style="display: none">
-    <audio #sc2_audio>
-      <source src="../../assets/warmChime.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
-    <div #sc2a>
-      <app-profile-picture-animated
-        #sc2a_profilepic
-      ></app-profile-picture-animated>
-      <app-typewriter class="hey">
-        <h1 style="text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5)">Hey there!</h1>
-      </app-typewriter>
-    </div>
-  </div>
-  <div #widescreen_bottom class="widescreen bottom" style="display: none"></div>
-
-  <h1 #nathan style="text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5)"></h1>
 </div>

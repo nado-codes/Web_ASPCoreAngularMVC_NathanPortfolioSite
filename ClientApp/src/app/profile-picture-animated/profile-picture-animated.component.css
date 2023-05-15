@@ -8,15 +8,6 @@
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-.nps-img:hover {
-  filter: brightness(80%);
-  cursor: pointer;
-}
-
-.nps-img:active {
-  filter: brightness(100%);
-}
-
 .nps-img > img {
   object-fit: cover;
   padding-right: 50px;
