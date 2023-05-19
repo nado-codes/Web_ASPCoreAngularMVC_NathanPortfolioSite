@@ -8,22 +8,51 @@ import { AfterViewInit, Component, ViewChild } from '@angular/core';
 export class HomeComponent implements AfterViewInit {
   @ViewChild('audio') audioRef: any;
   @ViewChild('videoPlayer') videoPlayerRef: any;
-  @ViewChild('decSeek') decSeekBtnRef: any;
-  @ViewChild('incSeek') incSeekBtnRef: any;
+  @ViewChild('seektext') seekTextRef: any;
+  @ViewChild('btnseek') seekBtnRef: any;
+
+  seekTarget?: number;
+  seekActive: boolean = false;
 
   ngAfterViewInit(): void {
     this.audioRef.nativeElement.play();
 
-    const decSeekBtn: HTMLButtonElement = this.decSeekBtnRef.nativeElement;
-    const incSeekBtn: HTMLButtonElement = this.incSeekBtnRef.nativeElement;
+    const seekText: HTMLInputElement = this.seekTextRef.nativeElement;
+    const seekBtn: HTMLButtonElement = this.seekBtnRef.nativeElement;
 
-    decSeekBtn.onmousedown = () => this.seekByMilliseconds(-2000);
-    incSeekBtn.onmousedown = () => this.seekByMilliseconds(2000);
+    const video: HTMLVideoElement = this.videoPlayerRef.nativeElement;
+    // this.smoothSeek(video, 3, 1000); // Smoothly seek to the 30-second mark over 1 second
+
+    seekBtn.onclick = () => {
+      const video: HTMLVideoElement = this.videoPlayerRef.nativeElement;
+      const seconds = parseFloat(seekText.value);
+
+      video.playbackRate = seconds;
+    };
   }
 
-  seekByMilliseconds(milliseconds: number): void {
-    const video: HTMLVideoElement = this.videoPlayerRef.nativeElement;
-    const seconds = milliseconds / 1000; // Convert milliseconds to seconds
-    video.currentTime += seconds; // Seek by the desired time interval in seconds
+  smoothSeek(
+    video: HTMLVideoElement,
+    targetTime: number,
+    duration: number
+  ): void {
+    const currentTime = video.currentTime;
+    const timeDiff = targetTime - currentTime;
+    const fps = 60; // Number of frames per second
+    const frameDuration = duration / fps; // Duration of each frame
+    const startTime = performance.now();
+
+    function step(timestamp: number) {
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const time = currentTime + timeDiff * progress;
+      video.currentTime = time;
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    }
+
+    requestAnimationFrame(step);
   }
 }
