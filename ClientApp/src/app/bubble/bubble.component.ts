@@ -15,7 +15,7 @@ interface Bubble {
   styleUrls: ['./bubble.component.css'],
 })
 export class BubbleComponent implements OnInit {
-  @Input() anchor?: 'top' | 'bottom' | 'left' | 'right';
+  @Input() position?: Bubble;
   @ViewChild('bubbleEl') bubbleElementRef: any;
   bubble: Bubble;
   id: string = '';
@@ -49,6 +49,13 @@ export class BubbleComponent implements OnInit {
         yOrigin: '0%',
         xTarget: '150px',
       },
+      topLeft: {
+        anchorOrigin: '25%',
+        anchorTarget: '-50%',
+        xOrigin: '0%',
+        yOrigin: '0%',
+        xTarget: '150px',
+      },
       bottom: {
         anchorOrigin: '25%',
         anchorTarget: '100%',
@@ -72,7 +79,13 @@ export class BubbleComponent implements OnInit {
       },
     };
 
-    this.bubble = bubbleObj[this.anchor ?? 'top'];
+    this.bubble = this.position ?? {
+      anchorOrigin: '25%',
+      anchorTarget: '-50%',
+      xOrigin: '0%',
+      yOrigin: '0%',
+      xTarget: '150px',
+    };
   }
 
   ngOnInit(): void {
@@ -85,11 +98,11 @@ export class BubbleComponent implements OnInit {
       styleSheet.sheet.insertRule(`
         @keyframes ${animationName} {
           from {
-            ${this.anchor}: calc(${this.bubble.anchorOrigin});
+            ${this.position}: calc(${this.bubble.anchorOrigin});
             transform: translate(0%, 0%);
           }
           to {
-            ${this.anchor}: calc(${this.bubble.anchorTarget});
+            ${this.position}: calc(${this.bubble.anchorTarget});
             transform: translate(${this.bubble.xOrigin}, ${this.bubble.yOrigin}) translateX(${this.bubble.xTarget});
           }
         }

@@ -24,7 +24,7 @@ import { BubbleComponent } from './bubble/bubble.component';
     ProfilePictureAnimatedComponent,
     TypewriterComponent,
     IntroComponent,
-    BubbleComponent
+    BubbleComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -34,9 +34,9 @@ import { BubbleComponent } from './bubble/bubble.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
-    ])
+    ]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

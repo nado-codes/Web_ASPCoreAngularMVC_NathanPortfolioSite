@@ -1,5 +1,9 @@
 .bubble {
   position: absolute;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid cyan;
   border-radius: 100px;
   width: 100px;
