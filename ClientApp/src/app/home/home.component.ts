@@ -9,6 +9,6 @@ export class HomeComponent implements AfterViewInit {
   @ViewChild('audio') audioRef: any;
 
   ngAfterViewInit(): void {
-    this.audioRef.nativeElement.play();
+    // this.audioRef.nativeElement.play();
   }
 }
