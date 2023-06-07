@@ -1,5 +1,41 @@
 <body>
-  <div class="container">
+  <div
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    "
+  >
+    <div
+      #backgroundShade
+      style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 1);
+        z-index: 1;
+      "
+    ></div>
+    <div
+      #background
+      style="
+        position: absolute;
+        background-color: red;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        animation: slowGrow 200s forwards;
+      "
+    >
+      a
+    </div>
+  </div>
+  <div style="position: absolute; z-index: 1; width: 100%; height: 100%">
     <router-outlet></router-outlet>
   </div>
 </body>

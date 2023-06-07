@@ -1,0 +1,14 @@
+.willis {
+  animation: appearAndGrow 3s forwards;
+  border-radius: 100px;
+  width: 300px;
+}
+
+@keyframes appearAndGrow {
+  from {
+    transform: scale(0%);
+  }
+  to {
+    transform: scale(100%);
+  }
+}
