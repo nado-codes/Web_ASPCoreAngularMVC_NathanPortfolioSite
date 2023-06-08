@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { EventService } from 'src/app/services/eventService';
 
 @Component({
   selector: 'app-menu-main',
@@ -7,14 +8,19 @@ import { AfterViewInit, Component, ViewChild } from '@angular/core';
 })
 export class MenuMainComponent implements AfterViewInit {
   @ViewChild('btnProjects') btnProjectsRef: any;
+  @ViewChild('container') containerRef: any;
 
   constructor() {}
 
   ngAfterViewInit(): void {
     const btnProjects: HTMLButtonElement = this.btnProjectsRef.nativeElement;
+    const container: HTMLElement = this.containerRef.nativeElement;
 
     btnProjects.onclick = () => {
-      window.location.pathname = '/projects';
+      container.style.animation = 'slideToLeft 2s forwards';
+
+      EventService.publishEvent('fadeOut');
+      setTimeout(() => (window.location.pathname = '/projects'), 2000);
     };
   }
 }

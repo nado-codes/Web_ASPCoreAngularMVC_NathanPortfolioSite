@@ -80,6 +80,15 @@ code {
     opacity: 1;
   }
 }
+
+@keyframes slideToBottom {
+  from {
+    transform: translateY(0vh);
+  }
+  to {
+    transform: translateY(-100vh);
+  }
+}
 @keyframes slideFromTop {
   from {
     transform: translateY(-100vh);
@@ -89,11 +98,11 @@ code {
   }
 }
 
-@keyframes slideFromRight {
+@keyframes slideToLeft {
   from {
-    transform: translateX(100vw);
+    transform: translateX(0vw);
   }
   to {
-    transform: translateX(0vw);
+    transform: translateX(-100vw);
   }
 }
