@@ -17,10 +17,10 @@ export class MenuMainComponent implements AfterViewInit {
     const container: HTMLElement = this.containerRef.nativeElement;
 
     btnProjects.onclick = () => {
-      container.style.animation = 'slideToLeft 2s forwards';
+      container.style.animation = 'slideToLeft 1s forwards';
 
       EventService.publishEvent('fadeOut');
-      setTimeout(() => (window.location.pathname = '/projects'), 2000);
+      setTimeout(() => (window.location.pathname = '/projects'), 1000);
     };
   }
 }

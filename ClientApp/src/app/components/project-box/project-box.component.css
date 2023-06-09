@@ -1,0 +1,59 @@
+.projectBox {
+  animation: projectBox 2s forwards;
+}
+
+.projectBox:hover {
+  animation: projectBox 2s forwards, projectBoxHover 1s forwards;
+  cursor: pointer;
+}
+
+.projectBox:hover img {
+  animation: projectBoxHoverImg 0.5s forwards;
+}
+
+.projectBox .title {
+  opacity: 1;
+}
+.projectBox:hover .title {
+  animation: projectBoxHoverTitle 1s forwards;
+}
+
+@keyframes projectBox {
+  from {
+    transform: translateX(-150vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes projectBoxHover {
+  from {
+    transform: scale(100%);
+  }
+  to {
+    transform: scale(105%);
+  }
+}
+
+@keyframes projectBoxHoverImg {
+  from {
+    transform: scale(100%);
+    filter: brightness(100%);
+  }
+  to {
+    transform: scale(110%);
+    filter: brightness(50%);
+  }
+}
+
+@keyframes projectBoxHoverTitle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

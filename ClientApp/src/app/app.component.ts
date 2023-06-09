@@ -27,9 +27,7 @@ export class AppComponent implements AfterViewInit {
 
     EventService.listenEvent('fadeOut', this.fadeOut);
 
-    background.style.backgroundImage = `url('../../assets/backgrounds/main.png')`;
-    //background.style.backgroundImage = `url(${localStorage.prevUrl})`;
-    backgroundShade.style.opacity = '0.5';
+    backgroundShade.style.opacity = '1';
 
     window.addEventListener('load', this.loadBackground);
   }

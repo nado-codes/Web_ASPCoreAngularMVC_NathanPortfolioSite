@@ -13,6 +13,7 @@ import { BubbleComponent } from './components/bubble/bubble.component';
 import { MenuMainComponent } from './views/menu-main/menu-main.component';
 import { MenuProjectsComponent } from './views/menu-projects/menu-projects.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
+import { ProjectBoxComponent } from './components/project-box/project-box.component';
 
 const routes: Routes = [
   { path: '', component: MenuMainComponent, pathMatch: 'full' },
@@ -32,6 +33,7 @@ const routes: Routes = [
     MenuMainComponent,
     MenuProjectsComponent,
     NotFoundComponent,
+    ProjectBoxComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
