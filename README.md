@@ -12,6 +12,7 @@
 **Concepts Explored:**
 - Angular
 - Complex CSS Animations
+- Figma (used for Graphic Design + Planning Layouts)
 
 ---
 
