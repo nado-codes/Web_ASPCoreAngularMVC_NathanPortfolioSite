@@ -9,4 +9,6 @@ export class MenuProjectsComponent implements AfterViewInit {
   constructor() {}
 
   ngAfterViewInit(): void {}
+
+  renderProject(): void {}
 }
