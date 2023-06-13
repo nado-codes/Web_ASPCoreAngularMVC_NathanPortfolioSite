@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-menu-projects',
   templateUrl: './menu-projects.component.html',
-  styleUrls: ['./menu-projects.component.css']
+  styleUrls: ['./menu-projects.component.css'],
 })
-export class MenuProjectsComponent implements OnInit {
+export class MenuProjectsComponent implements AfterViewInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngAfterViewInit(): void {}
 }

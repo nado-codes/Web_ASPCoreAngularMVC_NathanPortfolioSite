@@ -3,17 +3,23 @@
 }
 
 .projectBox:hover {
-  animation: projectBox 2s forwards, projectBoxHover 1s forwards;
   cursor: pointer;
 }
 
 .projectBox:hover img {
-  animation: projectBoxHoverImg 0.5s forwards;
+  animation: projectBoxHoverImgScale 0.5s forwards,
+    projectBoxHoverImgBrightness 0.5s forwards;
+}
+
+.projectBox:active img {
+  animation: projectBoxHoverImgScale 0.5s forwards;
+  filter: brightness(100%);
 }
 
 .projectBox .title {
   opacity: 1;
 }
+
 .projectBox:hover .title {
   animation: projectBoxHoverTitle 1s forwards;
 }
@@ -38,13 +44,20 @@
   }
 }
 
-@keyframes projectBoxHoverImg {
+@keyframes projectBoxHoverImgScale {
   from {
     transform: scale(100%);
-    filter: brightness(100%);
   }
   to {
     transform: scale(110%);
+  }
+}
+
+@keyframes projectBoxHoverImgBrightness {
+  from {
+    filter: brightness(100%);
+  }
+  to {
     filter: brightness(50%);
   }
 }
