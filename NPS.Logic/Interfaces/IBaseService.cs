@@ -1,16 +1,16 @@
 namespace NPS.Interfaces
 {
-    internal interface IBaseService<M> where M: IBaseModel
+    internal interface IBaseService<Model> where Model: IBaseModel
     {
-        public Task<IEnumerable<M>> GetAllAsync();
+        public Task<IEnumerable<Model>> GetAllAsync();
 
-        public Task<M> GetAsync(long id);
+        public Task<Model> GetAsync(long id);
 
-        public Task<M> AddAsync(M item);
+        public Task<Model> AddAsync(Model item);
 
-        public Task<M> UpdateAsync(M item);
+        public Task<Model> UpdateAsync(Model item);
 
-        public Task<M> DeleteAsync(long id);
+        public Task<Model> DeleteAsync(long id);
     }
 
 }
