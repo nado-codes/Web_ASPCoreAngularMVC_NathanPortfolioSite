@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ComponentFactory } from '@angular/core';
 
 @Component({
   selector: 'app-menu-projects',
@@ -9,6 +9,4 @@ export class MenuProjectsComponent implements AfterViewInit {
   constructor() {}
 
   ngAfterViewInit(): void {}
-
-  renderProject(): void {}
 }

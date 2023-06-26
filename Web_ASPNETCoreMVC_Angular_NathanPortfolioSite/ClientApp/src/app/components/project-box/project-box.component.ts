@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild, Input } from '@angular/core';
 import { EventService } from 'src/app/services/eventService';
 
 @Component({
@@ -7,18 +7,15 @@ import { EventService } from 'src/app/services/eventService';
   styleUrls: ['./project-box.component.css'],
 })
 export class ProjectBoxComponent implements AfterViewInit {
-  @ViewChild('pageContainer') pageContainerRef: any;
+  @Input('onclick') onClick?: () => void;
   @ViewChild('container') containerRef: any;
 
   constructor() {}
 
   ngAfterViewInit(): void {
-    const pageContainer: HTMLElement = this.pageContainerRef.nativeElement;
     const container: HTMLElement = this.containerRef.nativeElement;
 
     container.onclick = () => {
-      pageContainer.style.animation = 'slideToLeft 1s forwards';
-
       EventService.publishEvent('fadeOut');
       setTimeout(() => (window.location.pathname = '/projects'), 1000);
     };
