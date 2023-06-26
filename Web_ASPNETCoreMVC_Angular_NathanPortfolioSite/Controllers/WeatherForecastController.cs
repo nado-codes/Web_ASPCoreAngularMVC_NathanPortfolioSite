@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using NPS.App.Models;
 
-namespace Web_ASPNETCoreMVC_Angular_NathanPortfolioSite.Controllers
+namespace NPS.Controllers
 {
     [ApiController]
     [Route("[controller]")]

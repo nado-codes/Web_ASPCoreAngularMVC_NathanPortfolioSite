@@ -1,4 +1,4 @@
-namespace Web_ASPNETCoreMVC_Angular_NathanPortfolioSite
+namespace NPS
 {
     public class Program
     {
