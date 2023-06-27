@@ -7,29 +7,29 @@ using System.Threading.Tasks;
 
 namespace NPS.Logic.Repositories
 {
-    internal class BaseRepository<M> : IBaseRepository<M> where M : IBaseModel
+    internal class BaseRepository<Model> : IBaseRepository<Model> where Model : IBaseModel
     {
-        public Task<M> AddAsync(M item)
+        public Task<Model> AddAsync(Model item)
         {
             throw new NotImplementedException();
         }
 
-        public Task<M> DeleteAsync(long id)
+        public Task<Model> DeleteAsync(long id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<M>> GetAllAsync()
+        public Task<IEnumerable<Model>> GetAllAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task<M> GetAsync(long id)
+        public Task<Model> GetAsync(long id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<M> UpdateAsync(M item)
+        public Task<Model> UpdateAsync(Model item)
         {
             throw new NotImplementedException();
         }

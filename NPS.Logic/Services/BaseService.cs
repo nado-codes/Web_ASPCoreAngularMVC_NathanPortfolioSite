@@ -25,7 +25,7 @@ namespace NPS.Logic.Services
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Model>> GetAllAsync()
+        public Task<IEnumerable<Model>> GetAll()
         {
             throw new NotImplementedException();
         }
