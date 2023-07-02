@@ -1,6 +1,6 @@
 ﻿namespace NPS.Interfaces
 {
-    internal interface IBaseModel
+    public interface IBaseModel
     {
         public long Id { get; set; }
 

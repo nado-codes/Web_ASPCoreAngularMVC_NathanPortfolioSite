@@ -1,14 +1,14 @@
 ﻿using NPS.Interfaces;
-using NPS.Logic.Models;
+using NPS.Api.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NPS.Logic.Interfaces
+namespace NPS.Api.Interfaces
 {
-    internal interface IProjectsService : IBaseService<Project>
+    public interface IProjectsService : IBaseService<Project>
     {
     }
 }

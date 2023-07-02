@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NPS.Logic.Services
+namespace NPS.Api.Services
 {
     internal class BaseService<Model,Repo> : IBaseService<Model> where Model : IBaseModel where Repo : IBaseRepository<Model>
     {
@@ -17,27 +17,27 @@ namespace NPS.Logic.Services
 
         public Task<Model> AddAsync(Model item)
         {
-            throw new NotImplementedException();
+            return _repository.AddAsync(item);
         }
 
-        public Task<Model> DeleteAsync(long id)
+        public Task<int> DeleteAsync(long id)
         {
-            throw new NotImplementedException();
+            return _repository.DeleteAsync(id);
         }
 
-        public Task<IEnumerable<Model>> GetAll()
+        public Task<IEnumerable<Model>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return _repository.GetAllAsync();
         }
 
         public Task<Model> GetAsync(long id)
         {
-            throw new NotImplementedException();
+            return _repository.GetAsync(id);
         }
 
-        public Task<Model> UpdateAsync(Model item)
+        public Task<int> UpdateAsync(Model item)
         {
-            throw new NotImplementedException();
+            return _repository.UpdateAsync(item);
         }
     }
 }

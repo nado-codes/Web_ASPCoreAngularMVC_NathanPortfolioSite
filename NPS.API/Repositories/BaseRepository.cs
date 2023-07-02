@@ -5,31 +5,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NPS.Logic.Repositories
+namespace NPS.Api.Repositories
 {
-    internal class BaseRepository<Model> : IBaseRepository<Model> where Model : IBaseModel
+    public class BaseRepository<Model> : IBaseRepository<Model> where Model : IBaseModel
     {
-        public Task<Model> AddAsync(Model item)
+        public virtual Task<Model> AddAsync(Model item)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Model> DeleteAsync(long id)
+        public virtual Task<int> DeleteAsync(long id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Model>> GetAllAsync()
+        public virtual Task<IEnumerable<Model>> GetAllAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task<Model> GetAsync(long id)
+        public virtual Task<Model> GetAsync(long id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Model> UpdateAsync(Model item)
+        public virtual Task<int> UpdateAsync(Model item)
         {
             throw new NotImplementedException();
         }

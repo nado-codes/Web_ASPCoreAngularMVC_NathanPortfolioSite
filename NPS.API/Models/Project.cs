@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NPS.Logic.Models
+namespace NPS.Api.Models
 {
-    internal record Project : BaseModel
+    public record Project : BaseModel
     {
         public string Name { get; set; } = string.Empty;
 

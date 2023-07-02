@@ -1,4 +1,4 @@
-namespace NPS.App.Models
+namespace NPS.API
 {
     public class WeatherForecast
     {

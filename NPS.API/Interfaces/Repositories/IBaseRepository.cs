@@ -1,7 +1,7 @@
 
 namespace NPS.Interfaces
 {
-    internal interface IBaseRepository<M> where M : IBaseModel
+    public interface IBaseRepository<M> where M : IBaseModel
     {
         public Task<IEnumerable<M>> GetAllAsync();
 
@@ -9,8 +9,8 @@ namespace NPS.Interfaces
 
         public Task<M> AddAsync(M item);
 
-        public Task<M> UpdateAsync(M item);
+        public Task<int> UpdateAsync(M item);
 
-        public Task<M> DeleteAsync(long id);
+        public Task<int> DeleteAsync(long id);
     }
 }

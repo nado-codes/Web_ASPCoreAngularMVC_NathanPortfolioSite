@@ -5,9 +5,9 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPS.App", "Web_ASPNETCoreMVC_Angular_NathanPortfolioSite\NPS.App.csproj", "{6EC0269B-D6CE-46EF-ADFC-31372CBC057F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPS.Tests", "NathanPortfolioSite.Tests\NPS.Tests.csproj", "{027D02F4-F3F7-4A2B-AED7-5FE40FFE9ABF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPS.Tests", "NathanPortfolioSite.Tests\NPS.Tests.csproj", "{027D02F4-F3F7-4A2B-AED7-5FE40FFE9ABF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPS.Logic", "NPS.Logic\NPS.Logic.csproj", "{81F4D1C8-2362-42A1-BE6E-95D283CF74A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPS.API", "NPS.API\NPS.API.csproj", "{AED1C26B-CAB1-4DE6-B159-2DD9F5299817}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{027D02F4-F3F7-4A2B-AED7-5FE40FFE9ABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{027D02F4-F3F7-4A2B-AED7-5FE40FFE9ABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{027D02F4-F3F7-4A2B-AED7-5FE40FFE9ABF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{81F4D1C8-2362-42A1-BE6E-95D283CF74A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{81F4D1C8-2362-42A1-BE6E-95D283CF74A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{81F4D1C8-2362-42A1-BE6E-95D283CF74A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{81F4D1C8-2362-42A1-BE6E-95D283CF74A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AED1C26B-CAB1-4DE6-B159-2DD9F5299817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AED1C26B-CAB1-4DE6-B159-2DD9F5299817}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AED1C26B-CAB1-4DE6-B159-2DD9F5299817}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AED1C26B-CAB1-4DE6-B159-2DD9F5299817}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NPS.Logic.Models
+namespace NPS.Api.Models
 {
-    internal record BaseModel : IBaseModel
+    public record BaseModel : IBaseModel
     {
         public long Id { get; set; }
 
