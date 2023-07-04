@@ -1,0 +1,72 @@
+.projectBox {
+  animation: projectBox 2s forwards;
+}
+
+.projectBox:hover {
+  cursor: pointer;
+}
+
+.projectBox:hover img {
+  animation: projectBoxHoverImgScale 0.5s forwards,
+    projectBoxHoverImgBrightness 0.5s forwards;
+}
+
+.projectBox:active img {
+  animation: projectBoxHoverImgScale 0.5s forwards;
+  filter: brightness(100%);
+}
+
+.projectBox .title {
+  opacity: 1;
+}
+
+.projectBox:hover .title {
+  animation: projectBoxHoverTitle 1s forwards;
+}
+
+@keyframes projectBox {
+  from {
+    transform: translateX(-150vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes projectBoxHover {
+  from {
+    transform: scale(100%);
+  }
+  to {
+    transform: scale(105%);
+  }
+}
+
+@keyframes projectBoxHoverImgScale {
+  from {
+    transform: scale(100%);
+  }
+  to {
+    transform: scale(110%);
+  }
+}
+
+@keyframes projectBoxHoverImgBrightness {
+  from {
+    filter: brightness(100%);
+  }
+  to {
+    filter: brightness(50%);
+  }
+}
+
+@keyframes projectBoxHoverTitle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

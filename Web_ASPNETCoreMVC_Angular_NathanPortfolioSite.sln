@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPS.App", "Web_ASPNETCoreMV
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPS.Tests", "NathanPortfolioSite.Tests\NPS.Tests.csproj", "{027D02F4-F3F7-4A2B-AED7-5FE40FFE9ABF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPS.API", "NPS.API\NPS.API.csproj", "{AED1C26B-CAB1-4DE6-B159-2DD9F5299817}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NPS.API", "NPS.API\NPS.API.csproj", "{AED1C26B-CAB1-4DE6-B159-2DD9F5299817}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPS.Frontend", "NPS.Frontend\NPS.Frontend.csproj", "{E2FCDA12-9440-4CD2-819E-EF306BD139B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{AED1C26B-CAB1-4DE6-B159-2DD9F5299817}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AED1C26B-CAB1-4DE6-B159-2DD9F5299817}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AED1C26B-CAB1-4DE6-B159-2DD9F5299817}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2FCDA12-9440-4CD2-819E-EF306BD139B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2FCDA12-9440-4CD2-819E-EF306BD139B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2FCDA12-9440-4CD2-819E-EF306BD139B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2FCDA12-9440-4CD2-819E-EF306BD139B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,110 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+
+body {
+  background-color: black;
+  user-select: none;
+}
+img {
+  -webkit-user-drag: none;
+}
+p {
+  color: white;
+}
+h1 {
+  color: white;
+}
+li {
+  color: white;
+}
+td {
+  color: white;
+}
+th {
+  color: white;
+}
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.container {
+  height: 100%;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nps-button {
+  border-radius: 8px;
+  border: 2px solid #00aaaa;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px #00aaaa;
+  background-color: rgba(0, 255, 255, 0.125);
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #fff;
+  height: 30px;
+  text-shadow: 1px 1px 5px white;
+  color: white;
+}
+
+.nps-interact:hover {
+  filter: brightness(80%);
+  cursor: pointer;
+}
+
+.nps-interact:active {
+  filter: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideToBottom {
+  from {
+    transform: translateY(0vh);
+  }
+  to {
+    transform: translateY(-100vh);
+  }
+}
+@keyframes slideFromTop {
+  from {
+    transform: translateY(-100vh);
+  }
+  to {
+    transform: translateY(0vh);
+  }
+}
+
+@keyframes slideToLeft {
+  from {
+    transform: translateX(0vw);
+  }
+  to {
+    transform: translateX(-100vw);
+  }
+}

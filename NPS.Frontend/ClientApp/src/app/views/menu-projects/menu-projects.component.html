@@ -1,0 +1,78 @@
+<style>
+  .underline {
+    animation: underlineBorder 2s forwards;
+  }
+
+  .underlineText {
+    animation: underlineFade 1s forwards;
+  }
+
+  @keyframes underlineFade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes underlineBorder {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 200px;
+    }
+  }
+</style>
+<div
+  #pageContainer
+  style="
+    position: relative;
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+    height: 100vh;
+    z-index: 2;
+  "
+>
+  <h1 class="underlineText" style="position: absolute; opacity: 0">Projects</h1>
+  <div
+    class="underline"
+    style="
+      position: absolute;
+      margin-left: 20px;
+      height: 50px;
+      border-bottom: 2px solid cyan;
+    "
+  ></div>
+  <div
+    style="
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 100px;
+      width: 100%;
+    "
+  >
+    <app-project-box></app-project-box>
+    <app-project-box></app-project-box>
+    <app-project-box></app-project-box>
+  </div>
+  <div
+    style="
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding-top: 0;
+    "
+  >
+    <button
+      class="nps-button nps-interact"
+      style="width: 200px; height: 50px; margin-top: -100px"
+    >
+      View My Top 10!
+    </button>
+  </div>
+</div>
