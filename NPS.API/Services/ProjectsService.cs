@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NPS.Api.Services
 {
-    internal class ProjectsService : BaseService<Project, IProjectsRepository>, IProjectsService
+    public class ProjectsService : BaseService<Project, IProjectsRepository>, IProjectsService
     { 
         private readonly IProjectsRepository _projectsRepository;
 

@@ -1,6 +1,7 @@
 ﻿using NPS.Api.Interfaces;
 using NPS.Api.Models;
 using NPS.Api.Repositories;
+using NPS.API.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,9 @@ namespace NPS.Tests.Mock
 
         public Task<Project> AddAsync(Project item)
         {
+            if (item == null)
+                throw new ArgumentException("item cannot be null");
+
             var projectWithId = item with { Id = _projects.Count + 1 };
             _projects.Add(projectWithId);
 
@@ -23,10 +27,10 @@ namespace NPS.Tests.Mock
 
         public Task<int> DeleteAsync(long id)
         {
-            var projectToDelete = _projects.First(p => p.Id == id);
+            var projectToDelete = _projects.FirstOrDefault(p => p.Id == id);
 
             if (projectToDelete == null)
-                throw new ApplicationException("No project found with id " + id);
+                throw new NotFoundException("No project found with id " + id);
 
             _projects.Remove(projectToDelete);
 
@@ -35,17 +39,33 @@ namespace NPS.Tests.Mock
 
         public Task<IEnumerable<Project>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return Task.Run<IEnumerable<Project>>(() => _projects);
         }
 
         public Task<Project> GetAsync(long id)
         {
-            throw new NotImplementedException();
+            var project = _projects.FirstOrDefault(p => p.Id == id);
+
+            if (project == null)
+                throw new NotFoundException("No project found with id " + id);
+
+            return Task.Run(() => project);
         }
 
         public Task<int> UpdateAsync(Project item)
         {
-            throw new NotImplementedException();
+            if (item == null)
+                throw new ArgumentException("item cannot be null");
+
+            var oldProject = _projects.FirstOrDefault(p => p.Id == item.Id);
+
+            if (oldProject == null)
+                throw new NotFoundException("No project found with id " + item.Id);
+
+            _projects.Add(item);
+            _projects.Remove(oldProject);
+
+            return Task.Run(() => 1);
         }
     }
 }
