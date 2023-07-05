@@ -152,6 +152,8 @@ publish/
 csx/
 *.build.csdef
 
+node_modules/
+
 # Microsoft Azure Emulator
 ecf/
 rcf/
