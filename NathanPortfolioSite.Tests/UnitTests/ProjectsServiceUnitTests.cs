@@ -17,16 +17,23 @@ namespace NPS.Tests.UnitTests
         [Fact]
         public async void AddTwoProjects()
         {
-            var project1 = await _projectsService.AddAsync(new Project());
-            var project2 = await _projectsService.AddAsync(new Project());
+            var project1 = await _projectsService.AddAsync(new Project() { Name="Project1"});
+            var project2 = await _projectsService.AddAsync(new Project() { Name="Project2"});
 
             Assert.NotNull(project1);
             Assert.NotNull(project2);
+
+            Assert.True(project2.Id > project1.Id);
+            Assert.Equal("Project1", project1.Name);
+            Assert.Equal("Project2", project2.Name);
         }
 
         [Fact]
         public async void GetAllProjects()
-        {       
+        {
+            await _projectsService.AddAsync(new Project());
+            await _projectsService.AddAsync(new Project());
+
             var projects = await _projectsService.GetAllAsync();
             Assert.NotEmpty(projects);
             Assert.Equal(2, projects.Count());
@@ -42,7 +49,7 @@ namespace NPS.Tests.UnitTests
         [Fact]      
         public async void UpdateOneProject()
         {
-            var project = await _projectsService.GetAsync(1);
+            var projectToUpdate = await _projectsService.AddAsync(new Project());
             project.Name = "UpdatedProject";
             
             var rowsUpdated = await _projectsService.UpdateAsync(project);
@@ -56,7 +63,8 @@ namespace NPS.Tests.UnitTests
         [Fact]      
         public async void DeleteOneProject()
         {
-            var rowsUpdated = await _projectsService.DeleteAsync(1);
+            var projectToDelete = await _projectsService.AddAsync(new Project());
+            var rowsUpdated = await _projectsService.DeleteAsync(projectToDelete.Id);
 
             Assert.Equal(1, rowsUpdated);
 
