@@ -50,9 +50,9 @@ namespace NPS.Tests.UnitTests
         public async void UpdateOneProject()
         {
             var projectToUpdate = await _projectsService.AddAsync(new Project());
-            project.Name = "UpdatedProject";
+            projectToUpdate.Name = "UpdatedProject";
             
-            var rowsUpdated = await _projectsService.UpdateAsync(project);
+            var rowsUpdated = await _projectsService.UpdateAsync(projectToUpdate);
             var updatedProject = await _projectsService.GetAsync(1);
 
             Assert.NotNull(updatedProject);
